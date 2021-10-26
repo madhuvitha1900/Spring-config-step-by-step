@@ -3,6 +3,10 @@ spring:
   name: spring-boot-crud
   profiles:
     active: {localhost}
+  security:
+    user:
+      name: root
+      password: root
   cloud:
     discovery:
       enabled: false
