@@ -1,0 +1,5 @@
+---
+spring:
+  profiles: localhost
+git:
+  url: http://localhost:8080/

@@ -1,0 +1,24 @@
+spring:
+  application:
+  name: spring-boot-crud
+  profiles:
+    active: {localhost}
+  cloud:
+    discovery:
+      enabled: false
+    config:
+      server:
+        git:
+          uri:  https://github.com/spring-cloud-samples/config-repo
+          default-label: main
+          clone-on-start: true
+        native:
+          search-locations:
+            - classpath:/repo/{profile}
+---
+spring:
+  profiles: localhost
+server:
+  port: 8888
+
+
