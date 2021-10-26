@@ -21,7 +21,9 @@ spring:
             - classpath:/repo/{profile}
 ---
 spring:
-  profiles: localhost
+  config:
+    activate:
+      on-profile: localhost
 server:
   port: 8888
 
